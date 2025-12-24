@@ -3,64 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardware vs Software - Informaprende</title>
+    <title>Lección: Hardware vs Software - Informaprende</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="dark-theme">
-    <header>
-        <div class="nav-container">
-            <div class="logo"><span>Informa</span>prende</div>
-            <nav><a href="index.html">⬅ Volver a Unidades</a></nav>
+
+    <header class="lesson-header">
+        <div class="nav-content">
+            <a href="index.html" class="btn-back-styled">
+                <i class="fa-solid fa-chevron-left"></i> VOLVER
+            </a>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar" style="width: 50%;"></div>
+            </div>
+            <div class="stats"><i class="fa-solid fa-ghost" style="color: #a855f7;"></i> S vs H</div>
         </div>
     </header>
 
-    <div class="lesson-container">
-        <h1>Hardware vs Software: Materia y Pensamiento</h1>
-        
-        <section class="explanation">
-            <p>Para entender la informática, primero hay que entender que tu computadora tiene dos naturalezas: una física y una digital.</p>
+    <main class="lesson-layout">
+        <section class="content-card">
+            <h1 class="tech-title">Hardware vs Software: ¿Cuál es la diferencia?</h1>
+            
+            <div class="text-block">
+                <p>Imagina que tu computadora es un <strong>Edificio de Lujo</strong>. Para que este edificio funcione y sea útil, necesita dos cosas fundamentales:</p>
+                
+                <p>Primero, la estructura física: los ladrillos, el cemento, las puertas y las ventanas. A todo esto que puedes ver y tocar lo llamamos <strong>Hardware</strong>.</p>
+                
+                <p>Pero un edificio vacío no sirve de nada. Necesitas un <strong>Reglamento</strong> y personas realizando actividades (como una fiesta o una oficina). A estas instrucciones invisibles las llamamos <strong>Software</strong>.</p>
+            </div>
 
-            <div class="comparison-box">
-                <div class="box">
-                    <h3><i class="fa-solid fa-microchip"></i> Hardware</h3>
-                    <p>Es la parte <strong>física</strong>. Si puedes tocarlo con las manos, es hardware. Ejemplos: El mouse, la batería, los cables internos, el procesador.</p>
+            
+            <div class="infographic-wrap">
+                <div class="node">
+                    <div class="icon-big" style="background: #64748b; color: white;"><i class="fa-solid fa-hammer"></i></div>
+                    <strong>Hardware</strong>
+                    <p>El Cuerpo (Físico)</p>
                 </div>
-                <div class="box">
-                    <h3><i class="fa-solid fa-window-restore"></i> Software</h3>
-                    <p>Es la parte <strong>lógica</strong>. Son las instrucciones. No puedes tocar un archivo de Word con tus manos, pero puedes verlo en pantalla.</p>
+                
+                <div class="connector-line-long">
+                    <div class="driver-label" style="background: #a855f7; box-shadow: 0 4px 0 #7e22ce;">SE NECESITAN</div>
+                    <div class="line-animated"></div>
+                </div>
+
+                <div class="node">
+                    <div class="icon-big" style="background: #3b82f6; color: white;"><i class="fa-solid fa-brain"></i></div>
+                    <strong>Software</strong>
+                    <p>La Mente (Digital)</p>
                 </div>
             </div>
 
-            <h2>¿Cómo trabajan juntos?</h2>
-            <p>El hardware es el cuerpo y el software es la inteligencia. Un teclado (hardware) no sirve de nada si no hay un programa (software) que entienda que estás presionando la tecla "A".</p>
-        </section>
-
-        
-
-        <section class="quiz-section">
-            <h2>🧠 Test de Clasificación</h2>
-            <div class="quiz-card">
-                <p>¿A qué categoría pertenece Google Chrome?</p>
-                <div class="options">
-                    <button class="option-btn" onclick="check(this, false)">Hardware (porque lo uso mucho).</button>
-                    <button class="option-btn" onclick="check(this, true)">Software (es un programa de navegación).</button>
+            <div class="text-block">
+                <h2>¿Cómo los reconozco rápido?</h2>
+                <div class="highlight-box">
+                    <p>Una regla de oro en informática dice: <strong>"Hardware es lo que puedes golpear y Software es lo que solo puedes insultar"</strong>.</p>
                 </div>
-                <div id="feedback" style="margin-top: 15px; font-weight: bold;"></div>
+                
+                <p>Si se te cae el celular y se rompe la pantalla, se rompió el <strong>Hardware</strong>. Si el celular se queda "pegado" y no abre WhatsApp, el problema es del <strong>Software</strong>.</p>
             </div>
+
+            <section class="duo-quiz-container">
+                <h2>Si estás usando Facebook en tu computadora...</h2>
+                <p style="color: #94a3b8; margin-bottom: 20px;">¿Qué categoría representa la aplicación de Facebook?</p>
+                
+                <div class="duo-options">
+                    <button class="duo-btn" onclick="verify(this, false)">
+                        <span class="bullet">A</span> Hardware (porque el mouse es real).
+                    </button>
+                    
+                    <button class="duo-btn" onclick="verify(this, true)">
+                        <span class="bullet">B</span> Software (porque son instrucciones digitales).
+                    </button>
+                    
+                    <button class="duo-btn" onclick="verify(this, false)">
+                        <span class="bullet">C</span> Es un Driver traductor.
+                    </button>
+                </div>
+            </section>
         </section>
+    </main>
+
+    <div id="duo-footer" class="duo-footer">
+        <div class="footer-inner">
+            <div id="footer-icon"></div>
+            <div class="footer-text">
+                <h3 id="footer-title"></h3>
+                <p id="footer-msg"></p>
+            </div>
+            <button class="btn-continue-duo" onclick="location.reload()">CONTINUAR</button>
+        </div>
     </div>
+
     <script>
-        function check(btn, isCorrect) {
-            const feedback = document.getElementById('feedback');
-            if(isCorrect) {
-                btn.style.background = "#22c55e";
-                feedback.innerHTML = "¡Excelente! 🌐 Chrome es software porque es código e instrucciones.";
-                feedback.style.color = "#22c55e";
+        function verify(btn, isCorrect) {
+            const allBtns = document.querySelectorAll('.duo-btn');
+            allBtns.forEach(b => b.style.pointerEvents = 'none');
+            const footer = document.getElementById('duo-footer');
+            footer.classList.add('show');
+
+            if (isCorrect) {
+                btn.classList.add('btn-correct');
+                footer.classList.add('is-correct');
+                document.getElementById('footer-title').innerText = "¡Excelente!";
+                document.getElementById('footer-msg').innerText = "Exacto. El software no se toca, se ejecuta.";
+                document.getElementById('footer-icon').innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+                document.getElementById('progressBar').style.width = "100%";
             } else {
-                btn.style.background = "#ef4444";
-                feedback.innerHTML = "Recuerda: 🧐 Si no lo puedes tocar físicamente, es Software.";
-                feedback.style.color = "#ef4444";
+                btn.classList.add('btn-incorrect');
+                footer.classList.add('is-incorrect');
+                document.getElementById('footer-title').innerText = "¡Casi!";
+                document.getElementById('footer-msg').innerText = "Recuerda: si no puedes tocarlo con las manos, es software.";
+                document.getElementById('footer-icon').innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
             }
         }
     </script>
