@@ -1,148 +1,98 @@
-/* Configuración General */
 :root {
-    --primary: #58cc02; /* Verde Duolingo */
-    --primary-dark: #46a302;
-    --dark: #2b2b2b;
-    --light: #f7f7f7;
-    --white: #ffffff;
-    --gray: #e5e5e5;
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
+    --accent: #38bdf8;
+    --text-main: #f1f5f9;
+    --success: #22c55e;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body.dark-theme {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
     margin: 0;
-    background-color: var(--light);
-    color: var(--dark);
+    font-family: 'Inter', sans-serif;
 }
 
-/* Header */
 header {
-    background: var(--white);
-    padding: 1rem 2rem;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 0 20px;
 }
 
-.logo { font-weight: bold; font-size: 1.5rem; color: var(--primary); }
-nav a { text-decoration: none; color: var(--dark); margin-left: 20px; font-weight: 500; }
+.logo { font-size: 1.5rem; font-weight: 800; }
+.logo span { color: var(--accent); }
 
-/* Hero Section */
-.hero {
+.hero-tech {
+    padding: 80px 20px;
     text-align: center;
-    padding: 4rem 1rem;
-    background: linear-gradient(135deg, #1cb0f6 0%, #1899d6 100%); /* Azul estilo Duolingo */
-    color: white;
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
 }
 
-/* Grid de Cursos */
-.courses-grid {
+.grid-unidades {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.card {
-    background: var(--white);
-    border-radius: 16px;
-    padding: 2rem;
-    text-decoration: none;
-    color: inherit;
-    border: 2px solid var(--gray);
-    border-bottom: 6px solid var(--gray); /* Efecto 3D botón */
-    transition: transform 0.1s, border-color 0.1s;
+.unit-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #334155;
+    position: relative;
+    transition: 0.3s;
+}
+
+.unit-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.unit-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: var(--accent);
+    color: var(--bg-dark);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.icon-main { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
+
+.lesson-list {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    gap: 10px;
 }
 
-.card:hover {
-    transform: translateY(-2px);
-    border-color: var(--primary);
-    border-bottom-color: var(--primary-dark);
-}
-
-.card-icon { font-size: 3rem; color: var(--primary); margin-bottom: 1rem; }
-.tag { background: #e5f6ff; color: #1cb0f6; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
-
-/* Estilos para el Artículo (Lección) */
-.lesson-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    background: white;
-    padding: 3rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-}
-
-.infographic {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #f0f4f8;
-    padding: 20px;
-    border-radius: 12px;
-    margin: 20px 0;
-    flex-wrap: wrap;
-}
-.info-box {
-    background: white; padding: 15px; border-radius: 8px; border: 2px solid #ddd; text-align: center; width: 120px;
-}
-.arrow { font-size: 2rem; color: #888; }
-
-/* ESTILOS DEL QUIZ (Duolingo Style) */
-.quiz-section {
-    margin-top: 3rem;
-    border-top: 2px dashed #eee;
-    padding-top: 2rem;
-}
-
-.options-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.option-btn {
-    background: white;
-    border: 2px solid var(--gray);
-    border-bottom: 5px solid var(--gray);
-    padding: 15px;
-    border-radius: 12px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.1s;
-    text-align: left;
-}
-
-.option-btn:active {
-    transform: translateY(2px);
-    border-bottom-width: 2px;
-}
-
-/* Estados de respuesta */
-.correct {
-    background-color: #d7ffb8 !important;
-    border-color: #58cc02 !important;
-    color: #46a302;
-}
-
-.incorrect {
-    background-color: #ffdfe0 !important;
-    border-color: #ff4b4b !important;
-    color: #ea2b2b;
-}
-
-#feedback {
-    margin-top: 20px;
-    padding: 15px;
+.lesson-list a {
+    text-decoration: none;
+    color: #94a3b8;
+    background: #0f172a;
+    padding: 12px;
     border-radius: 10px;
-    font-weight: bold;
-    display: none; /* Oculto por defecto */
+    transition: 0.2s;
+}
+
+.lesson-list a:hover {
+    background: var(--accent);
+    color: var(--bg-dark);
 }

@@ -3,47 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faby Academy - Aprende Informática</title>
+    <title>Informaprende | Academia Digital</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-
+<body class="dark-theme">
     <header>
-        <div class="logo">🚀 Faby Academy</div>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="#">Tutoriales</a>
-            <a href="#">Contacto</a>
-        </nav>
+        <div class="nav-container">
+            <div class="logo"><span>Informa</span>prende</div>
+            <nav>
+                <a href="#unidades">Unidades</a>
+                <a href="https://fabybusinessman.github.io/Mi-Portal/" class="btn-portal">Mi Portal</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="hero">
-        <h1>Domina la Informática de forma práctica</h1>
-        <p>Tutoriales interactivos, infografías y tests rápidos para validar tu conocimiento.</p>
-    </main>
-
-    <section class="courses-grid">
-        <a href="drivers.html" class="card">
-            <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
-            <div class="card-content">
-                <span class="tag">Hardware</span>
-                <h2>¿Qué son los Drivers?</h2>
-                <p>Entiende cómo tu PC habla con sus componentes. Incluye test interactivo.</p>
-            </div>
-            <div class="card-footer">
-                <span>Comenzar lección &rarr;</span>
-            </div>
-        </a>
-
-        <div class="card coming-soon">
-            <div class="card-icon"><i class="fa-solid fa-lock"></i></div>
-            <div class="card-content">
-                <h2>Próximamente...</h2>
-                <p>Más contenido sobre redes, software y programación.</p>
-            </div>
+    <section class="hero-tech">
+        <div class="hero-content">
+            <h1>Domina la tecnología paso a paso</h1>
+            <p>Lecciones interactivas diseñadas para humanos, no para robots.</p>
         </div>
     </section>
 
+    <main id="unidades" class="container">
+        <div class="grid-unidades">
+            <div class="unit-card">
+                <div class="unit-badge">Unidad 1</div>
+                <i class="fa-solid fa-microchip icon-main"></i>
+                <h2>Hardware</h2>
+                <p>Las piezas físicas que puedes tocar. Desde el cerebro del PC hasta los cables.</p>
+                <div class="lesson-list">
+                    <a href="drivers.html"><i class="fa-solid fa-play"></i> Los Drivers (Controladores)</a>
+                    <a href="procesador.html"><i class="fa-solid fa-lock"></i> El Procesador (CPU) - <small>Próximamente</small></a>
+                </div>
+            </div>
+
+            <div class="unit-card">
+                <div class="unit-badge">Unidad 2</div>
+                <i class="fa-solid fa-code icon-main"></i>
+                <h2>Software</h2>
+                <p>Las instrucciones invisibles que le dicen al hardware qué hacer.</p>
+                <div class="lesson-list">
+                    <a href="apps-vs-so.html"><i class="fa-solid fa-play"></i> Apps vs Sistemas</a>
+                    <a href="#"><i class="fa-solid fa-lock"></i> Tipos de Archivos</a>
+                </div>
+            </div>
+
+            <div class="unit-card">
+                <div class="unit-badge">Unidad 3</div>
+                <i class="fa-solid fa-desktop icon-main"></i>
+                <h2>Sistemas Operativos</h2>
+                <p>El director de orquesta que organiza todo dentro de tu computadora.</p>
+                <div class="lesson-list">
+                    <a href="que-es-so.html"><i class="fa-solid fa-play"></i> ¿Qué es Windows/Linux?</a>
+                    <a href="#"><i class="fa-solid fa-lock"></i> Gestión de Carpetas</a>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
