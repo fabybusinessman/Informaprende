@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faby Academy - Aprende Informática</title>
+    <title>Lección: Drivers - Faby Academy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -11,39 +11,57 @@
 
     <header>
         <div class="logo">🚀 Faby Academy</div>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="#">Tutoriales</a>
-            <a href="#">Contacto</a>
-        </nav>
+        <nav><a href="index.html">⬅ Volver al inicio</a></nav>
     </header>
 
-    <main class="hero">
-        <h1>Domina la Informática de forma práctica</h1>
-        <p>Tutoriales interactivos, infografías y tests rápidos para validar tu conocimiento.</p>
-    </main>
+    <div class="lesson-container">
+        <h1>¿Qué es un Driver (Controlador)?</h1>
+        <p>Imagina que tu Sistema Operativo (Windows) habla español y tu Impresora habla japonés. No se entienden, ¿verdad?</p>
+        
+        <p>Un <strong>Driver</strong> actúa como un <strong>traductor</strong>. Es un pequeño programa que permite que el sistema operativo se comunique con el hardware.</p>
 
-    <section class="courses-grid">
-        <a href="drivers.html" class="card">
-            <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
-            <div class="card-content">
-                <span class="tag">Hardware</span>
-                <h2>¿Qué son los Drivers?</h2>
-                <p>Entiende cómo tu PC habla con sus componentes. Incluye test interactivo.</p>
+        <div class="infographic">
+            <div class="info-box">
+                <i class="fa-brands fa-windows fa-2x"></i><br>
+                <strong>Windows</strong><br>
+                (Cliente)
             </div>
-            <div class="card-footer">
-                <span>Comenzar lección &rarr;</span>
+            <div class="arrow">➡</div>
+            <div class="info-box" style="border-color: #58cc02; background: #eaffea;">
+                <i class="fa-solid fa-file-code fa-2x"></i><br>
+                <strong>DRIVER</strong><br>
+                (Traductor)
             </div>
-        </a>
-
-        <div class="card coming-soon">
-            <div class="card-icon"><i class="fa-solid fa-lock"></i></div>
-            <div class="card-content">
-                <h2>Próximamente...</h2>
-                <p>Más contenido sobre redes, software y programación.</p>
+            <div class="arrow">➡</div>
+            <div class="info-box">
+                <i class="fa-solid fa-print fa-2x"></i><br>
+                <strong>Impresora</strong><br>
+                (Hardware)
             </div>
         </div>
-    </section>
 
+        <h2>¿Por qué son importantes?</h2>
+        <ul>
+            <li>Sin drivers, la tarjeta de video no mostraría gráficos en alta resolución.</li>
+            <li>El Wi-Fi no funcionaría.</li>
+            <li>La impresora no sabría cómo imprimir una "A".</li>
+        </ul>
+
+        <div class="quiz-section">
+            <h2>🧠 ¡Ponte a prueba!</h2>
+            <p>Pregunta: ¿Cuál es la función principal de un driver?</p>
+            
+            <div class="options-grid">
+                <button class="option-btn" onclick="checkAnswer(this, false)">Hacer que el PC sea más rápido.</button>
+                <button class="option-btn" onclick="checkAnswer(this, true)">Traducir instrucciones entre el SO y el hardware.</button>
+                <button class="option-btn" onclick="checkAnswer(this, false)">Limpiar virus del computador.</button>
+                <button class="option-btn" onclick="checkAnswer(this, false)">Darle energía eléctrica a la pantalla.</button>
+            </div>
+
+            <div id="feedback"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
