@@ -3,63 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drivers: El Traductor de tu PC - Informaprende</title>
+    <title>Lección: El Traductor de la PC - Informaprende</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="dark-theme">
-    <header>
-        <div class="nav-container">
-            <div class="logo"><span>Informa</span>prende</div>
-            <nav><a href="index.html">⬅ Volver a Unidades</a></nav>
+
+    <header class="lesson-header">
+        <div class="nav-content">
+            <a href="index.html" class="btn-back-styled">
+                <i class="fa-solid fa-chevron-left"></i> VOLVER
+            </a>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar" style="width: 20%;"></div>
+            </div>
+            <div class="stats"><i class="fa-solid fa-fire" style="color: #ff9600;"></i> 1</div>
         </div>
     </header>
 
-    <div class="lesson-container">
-        <h1>Drivers: El Traductor Universal</h1>
-        
-        <section class="explanation">
-            <p>Imagina que compras una impresora de última generación y la conectas a tu computadora. La impresora "habla" un idioma técnico muy complejo y Windows habla otro. <strong>Sin un traductor, no pasará nada.</strong></p>
-
-            <div class="highlight-box">
-                <p>Un <strong>Driver</strong> (o controlador) es el software que le enseña al Sistema Operativo cómo usar una pieza de hardware específica.</p>
+    <main class="lesson-layout">
+        <section class="content-card">
+            <h1 class="tech-title">Los Drivers: El Idioma de las Máquinas</h1>
+            
+            <div class="text-block">
+                <p>Imagina que tu computadora es una oficina donde trabaja un jefe muy inteligente llamado <strong>Windows</strong>. Él sabe organizar archivos y dar órdenes, pero tiene un problema: <strong>solo habla español.</strong></p>
+                
+                <p>Un día, el jefe compra una <strong>Impresora</strong> nueva que viene de Japón. La impresora es excelente en su trabajo, pero <strong>solo habla japonés.</strong></p>
+                
+                <p>Cuando el jefe le grita: <em>"¡Imprime este documento!"</em>, la impresora no se mueve porque no entiende ni una palabra. <strong>Aquí es donde ocurre el error que todos conocemos.</strong></p>
             </div>
 
-            <h2>¿Qué pasa si no tengo los drivers?</h2>
-            <p>Es como tener los mejores ingredientes pero no tener la receta. Verás síntomas como:</p>
-            <ul>
-                <li>La pantalla se ve estirada o con colores feos (falta driver de video).</li>
-                <li>No tienes internet aunque el cable esté puesto (falta driver de red).</li>
-                <li>El sonido no funciona o se escucha entrecortado.</li>
-            </ul>
-        </section>
-
-        
-
-        <section class="quiz-section">
-            <h2>🧠 Desafío de Hardware</h2>
-            <div class="quiz-card">
-                <p>Si instalas una tarjeta de video nueva pero los juegos se ven lentos y mal, ¿qué es lo más probable que falte?</p>
-                <div class="options">
-                    <button class="option-btn" onclick="check(this, false)">Comprar otra pantalla.</button>
-                    <button class="option-btn" onclick="check(this, true)">Actualizar el driver de la tarjeta de video.</button>
-                    <button class="option-btn" onclick="check(this, false)">Limpiar el teclado.</button>
+            <div class="infographic-wrap">
+                <div class="node">
+                    <div class="icon-big windows"><i class="fa-brands fa-windows"></i></div>
+                    <strong>Jefe Windows</strong>
+                    <p>(Habla Español)</p>
                 </div>
-                <div id="feedback" style="margin-top: 15px; font-weight: bold;"></div>
+                
+                <div class="connector-line-long">
+                    <div class="driver-label">DRIVER (Traductor)</div>
+                    <div class="line-animated"></div>
+                </div>
+
+                <div class="node">
+                    <div class="icon-big hardware"><i class="fa-solid fa-print"></i></div>
+                    <strong>Impresora</strong>
+                    <p>(Habla Japonés)</p>
+                </div>
             </div>
+
+            <div class="text-block">
+                <h2>¿Cómo soluciona el Driver este problema?</h2>
+                <p>El <strong>Driver</strong> es como un traductor profesional que se sienta entre el jefe y la impresora. </p>
+                
+                <div class="highlight-box">
+                    <p>Cuando tú haces clic en "Imprimir", el Jefe le da la orden al <strong>Driver</strong> en español. El Driver la traduce instantáneamente al japonés y se la entrega a la impresora. <strong>¡Magia! La impresora comienza a trabajar.</strong></p>
+                </div>
+
+                <h3>¿Por qué existen tantos Drivers diferentes?</h3>
+                <p>Porque cada pieza de hardware es única. El "idioma" que habla un mouse no es el mismo que habla una tarjeta de video o una cámara web. Por eso, <strong>cada dispositivo necesita su propio driver específico.</strong></p>
+            </div>
+
+            <div class="infographic-wrap" style="background: rgba(56, 189, 248, 0.05); border-style: solid;">
+                <div class="node">
+                    <i class="fa-solid fa-1" style="color: var(--tech-blue)"></i>
+                    <p>Tú haces clic</p>
+                </div>
+                <div class="connector-line-long" style="margin: 0 10px;"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="node">
+                    <i class="fa-solid fa-2" style="color: var(--tech-blue)"></i>
+                    <p>Driver traduce</p>
+                </div>
+                <div class="connector-line-long" style="margin: 0 10px;"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="node">
+                    <i class="fa-solid fa-3" style="color: var(--tech-blue)"></i>
+                    <p>Hardware obedece</p>
+                </div>
+            </div>
+
+            <div class="text-block">
+                <p><strong>Dato Curioso:</strong> Cuando actualizas un driver, es como si tu traductor tomara un curso avanzado. Ahora conoce formas más rápidas y eficientes de pasar los mensajes, lo que hace que tu computadora se sienta más veloz.</p>
+            </div>
+
+            <section class="duo-quiz-container">
+                <h2>Basado en la historia del jefe y la impresora...</h2>
+                <p style="color: #94a3b8; margin-bottom: 20px;">¿Qué es realmente un Driver?</p>
+                
+                <div class="duo-options">
+                    <button class="duo-btn" onclick="verify(this, false)">
+                        <span class="bullet">A</span> Es el cable físico que une las máquinas.
+                    </button>
+                    
+                    <button class="duo-btn" onclick="verify(this, true)">
+                        <span class="bullet">B</span> Es el programa traductor que permite que se entiendan.
+                    </button>
+                    
+                    <button class="duo-btn" onclick="verify(this, false)">
+                        <span class="bullet">C</span> Es una pieza de metal dentro del monitor.
+                    </button>
+                </div>
+            </section>
         </section>
+    </main>
+
+    <div id="duo-footer" class="duo-footer">
+        <div class="footer-inner">
+            <div id="footer-icon"></div>
+            <div class="footer-text">
+                <h3 id="footer-title"></h3>
+                <p id="footer-msg"></p>
+            </div>
+            <button class="btn-continue-duo" onclick="location.reload()">CONTINUAR</button>
+        </div>
     </div>
+
     <script>
-        function check(btn, isCorrect) {
-            const feedback = document.getElementById('feedback');
-            if(isCorrect) {
-                btn.style.background = "#22c55e";
-                feedback.innerHTML = "¡Correcto! 🎮 El driver le dirá a Windows cómo usar toda la potencia de la tarjeta.";
-                feedback.style.color = "#22c55e";
+        function verify(btn, isCorrect) {
+            const allBtns = document.querySelectorAll('.duo-btn');
+            allBtns.forEach(b => b.style.pointerEvents = 'none');
+            const footer = document.getElementById('duo-footer');
+            footer.classList.add('show');
+
+            if (isCorrect) {
+                btn.classList.add('btn-correct');
+                footer.classList.add('is-correct');
+                document.getElementById('footer-title').innerText = "¡Excelente!";
+                document.getElementById('footer-msg').innerText = "¡Has dominado el idioma de los drivers!";
+                document.getElementById('footer-icon').innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+                document.getElementById('progressBar').style.width = "100%";
             } else {
-                btn.style.background = "#ef4444";
-                feedback.innerHTML = "Incorrecto. ❌ El problema es de comunicación (software), no del monitor.";
-                feedback.style.color = "#ef4444";
+                btn.classList.add('btn-incorrect');
+                footer.classList.add('is-incorrect');
+                document.getElementById('footer-title').innerText = "Sigue intentando";
+                document.getElementById('footer-msg').innerText = "Recuerda: El driver traduce entre el jefe y el empleado.";
+                document.getElementById('footer-icon').innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
             }
         }
     </script>

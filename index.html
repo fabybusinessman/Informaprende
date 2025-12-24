@@ -8,58 +8,79 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="dark-theme">
-    <header>
-        <div class="nav-container">
-            <div class="logo"><span>Informa</span>prende</div>
+
+    <header class="lesson-header">
+        <div class="nav-content">
+            <div class="tech-title" style="font-size: 1.5rem; margin-bottom: 0;">
+                <span class="highlight-text">Informa</span>prende
+            </div>
             <nav>
-                <a href="#unidades">Unidades</a>
-                <a href="https://fabybusinessman.github.io/Mi-Portal/" class="btn-portal">Mi Portal</a>
+                <a href="https://fabybusinessman.github.io/Mi-Portal/" class="btn-back-styled">
+                    <i class="fa-solid fa-house"></i> MI PORTAL
+                </a>
             </nav>
         </div>
     </header>
 
-    <section class="hero-tech">
-        <div class="hero-content">
-            <h1>Domina la tecnología paso a paso</h1>
-            <p>Lecciones interactivas diseñadas para humanos, no para robots.</p>
-        </div>
-    </section>
+    <main class="lesson-layout">
+        <section class="content-card" style="text-align: center; margin-bottom: 30px;">
+            <h1 class="tech-title">¿Qué quieres aprender hoy?</h1>
+            <p class="text-block">Selecciona una unidad para comenzar tu camino ninja en la informática.</p>
+        </section>
 
-    <main id="unidades" class="container">
-        <div class="grid-unidades">
-            <div class="unit-card">
-                <div class="unit-badge">Unidad 1</div>
-                <i class="fa-solid fa-microchip icon-main"></i>
-                <h2>Hardware</h2>
-                <p>Las piezas físicas que puedes tocar. Desde el cerebro del PC hasta los cables.</p>
-                <div class="lesson-list">
-                    <a href="drivers.html"><i class="fa-solid fa-play"></i> Los Drivers (Controladores)</a>
-                    <a href="procesador.html"><i class="fa-solid fa-lock"></i> El Procesador (CPU) - <small>Próximamente</small></a>
+        <div class="units-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+            
+            <div class="content-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <span class="driver-label">UNIDAD 1</span>
+                    <i class="fa-solid fa-microchip highlight-text" style="font-size: 1.5rem;"></i>
+                </div>
+                <h2 style="margin-top: 0;">Hardware</h2>
+                <p class="text-block" style="font-size: 0.95rem;">Las piezas físicas que puedes tocar y sentir. El cuerpo de la computadora.</p>
+                
+                <div class="duo-options">
+                    <a href="drivers.html" style="text-decoration: none;">
+                        <button class="duo-btn">
+                            <span class="bullet">1</span> Los Drivers (Traductor)
+                        </button>
+                    </a>
+
+                    
+                    <a href="procesador.html" style="text-decoration: none;">
+    <button class="duo-btn">
+        <span class="bullet">2</span> El Procesador
+    </button>
+</a>
+
                 </div>
             </div>
 
-            <div class="unit-card">
-                <div class="unit-badge">Unidad 2</div>
-                <i class="fa-solid fa-code icon-main"></i>
-                <h2>Software</h2>
-                <p>Las instrucciones invisibles que le dicen al hardware qué hacer.</p>
-                <div class="lesson-list">
-                    <a href="apps-vs-so.html"><i class="fa-solid fa-play"></i> Apps vs Sistemas</a>
-                    <a href="#"><i class="fa-solid fa-lock"></i> Tipos de Archivos</a>
+            <div class="content-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <span class="driver-label">UNIDAD 2</span>
+                    <i class="fa-solid fa-code highlight-text" style="font-size: 1.5rem;"></i>
+                </div>
+                <h2 style="margin-top: 0;">Software</h2>
+                <p class="text-block" style="font-size: 0.95rem;">Los programas y el pensamiento digital. Lo que no puedes tocar.</p>
+                
+                <div class="duo-options">
+                    <a href="apps-vs-so.html" style="text-decoration: none;">
+                        <button class="duo-btn">
+                            <span class="bullet">1</span> Hardware vs Software
+                        </button>
+                    </a>
+                    <button class="duo-btn" style="opacity: 0.5; cursor: not-allowed;">
+                        <span class="bullet">2</span> Tipos de Apps <i class="fa-solid fa-lock" style="margin-left: 10px;"></i>
+                    </button>
                 </div>
             </div>
 
-            <div class="unit-card">
-                <div class="unit-badge">Unidad 3</div>
-                <i class="fa-solid fa-desktop icon-main"></i>
-                <h2>Sistemas Operativos</h2>
-                <p>El director de orquesta que organiza todo dentro de tu computadora.</p>
-                <div class="lesson-list">
-                    <a href="que-es-so.html"><i class="fa-solid fa-play"></i> ¿Qué es Windows/Linux?</a>
-                    <a href="#"><i class="fa-solid fa-lock"></i> Gestión de Carpetas</a>
-                </div>
-            </div>
         </div>
     </main>
+
+    <footer style="text-align: center; padding: 20px; color: #475569; font-size: 0.8rem;">
+        Desarrollado con ❤️ para fabybusinessman
+    </footer>
+
 </body>
 </html>
