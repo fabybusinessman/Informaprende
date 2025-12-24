@@ -16,47 +16,47 @@
     </header>
 
     <div class="lesson-container">
-        <h1>El Director de Orquesta: El Sistema Operativo</h1>
+        <h1>El Director de Orquesta: Sistemas Operativos</h1>
         
         <section class="explanation">
-            <p>Imagínate que una computadora es una <strong>orquesta sinfónica</strong> llena de músicos muy talentosos pero que no hablan entre sí:</p>
+            <p>El Sistema Operativo (SO) es el software principal que gestiona todo en tu dispositivo. Sin él, la computadora es solo una caja de metal cara.</p>
+
+            <h3>Funciones principales:</h3>
             <ul>
-                <li>El pianista es el <strong>Procesador</strong>.</li>
-                <li>El que guarda las partituras es el <strong>Disco Duro</strong>.</li>
-                <li>El que muestra el espectáculo es la <strong>Pantalla</strong>.</li>
+                <li><strong>Gestionar archivos:</strong> Guardar, mover y borrar tus fotos y documentos.</li>
+                <li><strong>Multitarea:</strong> Permitir que escuches música mientras escribes un correo.</li>
+                <li><strong>Interfaz:</strong> Crear las ventanas y botones para que no tengas que escribir código raro para abrir una carpeta.</li>
             </ul>
-            <p>Sin nadie que los dirija, todos tocarían al mismo tiempo y sería un caos. Ahí entra el <strong>Sistema Operativo (SO)</strong>.</p>
-            
+
             <div class="highlight-box">
-                <h3>¿Qué hace realmente el SO?</h3>
-                <p>Es el software más importante. Se encarga de gestionar la memoria, los procesos y todo lo que ves. Ejemplos famosos son <strong>Windows, macOS, Linux, Android e iOS</strong>.</p>
+                <p><strong>Windows:</strong> El más común en oficinas. <strong>Linux:</strong> Muy usado por programadores y servidores. <strong>Android/iOS:</strong> Los reyes de los celulares.</p>
             </div>
         </section>
 
+        
+
         <section class="quiz-section">
-            <h2>🚀 Mini-Test de Unidad</h2>
+            <h2>🧠 Test Final</h2>
             <div class="quiz-card">
-                <p>Si la computadora fuera un restaurante, ¿quién sería el Sistema Operativo?</p>
+                <p>¿Qué pasaría si borras el Sistema Operativo de tu PC?</p>
                 <div class="options">
-                    <button class="option-btn" onclick="check(this, false)">La comida.</button>
-                    <button class="option-btn" onclick="check(this, true)">El gerente que organiza las mesas y los pedidos.</button>
-                    <button class="option-btn" onclick="check(this, false)">El cliente que paga.</button>
+                    <button class="option-btn" onclick="check(this, false)">La PC iría más rápido porque tiene más espacio.</button>
+                    <button class="option-btn" onclick="check(this, true)">La PC no encendería o se quedaría en una pantalla negra.</button>
                 </div>
                 <div id="feedback" style="margin-top: 15px; font-weight: bold;"></div>
             </div>
         </section>
     </div>
-
     <script>
         function check(btn, isCorrect) {
             const feedback = document.getElementById('feedback');
             if(isCorrect) {
                 btn.style.background = "#22c55e";
-                feedback.innerHTML = "¡Exacto! 👏 Sin el gerente (SO), los cocineros y meseros (hardware) no sabrían qué hacer.";
+                feedback.innerHTML = "¡Exacto! 💻 El SO es el alma de la máquina; sin él, no hay vida digital.";
                 feedback.style.color = "#22c55e";
             } else {
                 btn.style.background = "#ef4444";
-                feedback.innerHTML = "No exactamente. 🧐 Intenta pensar quién es el que manda y organiza todo.";
+                feedback.innerHTML = "¡Cuidado! ⚠️ Sin el SO, el hardware no tiene instrucciones para arrancar.";
                 feedback.style.color = "#ef4444";
             }
         }

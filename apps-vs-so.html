@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware vs Software - Informaprende</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <div class="nav-container">
+            <div class="logo"><span>Informa</span>prende</div>
+            <nav><a href="index.html">⬅ Volver a Unidades</a></nav>
+        </div>
+    </header>
+
+    <div class="lesson-container">
+        <h1>Hardware vs Software: Materia y Pensamiento</h1>
+        
+        <section class="explanation">
+            <p>Para entender la informática, primero hay que entender que tu computadora tiene dos naturalezas: una física y una digital.</p>
+
+            <div class="comparison-box">
+                <div class="box">
+                    <h3><i class="fa-solid fa-microchip"></i> Hardware</h3>
+                    <p>Es la parte <strong>física</strong>. Si puedes tocarlo con las manos, es hardware. Ejemplos: El mouse, la batería, los cables internos, el procesador.</p>
+                </div>
+                <div class="box">
+                    <h3><i class="fa-solid fa-window-restore"></i> Software</h3>
+                    <p>Es la parte <strong>lógica</strong>. Son las instrucciones. No puedes tocar un archivo de Word con tus manos, pero puedes verlo en pantalla.</p>
+                </div>
+            </div>
+
+            <h2>¿Cómo trabajan juntos?</h2>
+            <p>El hardware es el cuerpo y el software es la inteligencia. Un teclado (hardware) no sirve de nada si no hay un programa (software) que entienda que estás presionando la tecla "A".</p>
+        </section>
+
+        
+
+        <section class="quiz-section">
+            <h2>🧠 Test de Clasificación</h2>
+            <div class="quiz-card">
+                <p>¿A qué categoría pertenece Google Chrome?</p>
+                <div class="options">
+                    <button class="option-btn" onclick="check(this, false)">Hardware (porque lo uso mucho).</button>
+                    <button class="option-btn" onclick="check(this, true)">Software (es un programa de navegación).</button>
+                </div>
+                <div id="feedback" style="margin-top: 15px; font-weight: bold;"></div>
+            </div>
+        </section>
+    </div>
+    <script>
+        function check(btn, isCorrect) {
+            const feedback = document.getElementById('feedback');
+            if(isCorrect) {
+                btn.style.background = "#22c55e";
+                feedback.innerHTML = "¡Excelente! 🌐 Chrome es software porque es código e instrucciones.";
+                feedback.style.color = "#22c55e";
+            } else {
+                btn.style.background = "#ef4444";
+                feedback.innerHTML = "Recuerda: 🧐 Si no lo puedes tocar físicamente, es Software.";
+                feedback.style.color = "#ef4444";
+            }
+        }
+    </script>
+</body>
+</html>

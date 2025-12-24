@@ -3,65 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lección: Drivers - Faby Academy</title>
+    <title>Drivers: El Traductor de tu PC - Informaprende</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-
+<body class="dark-theme">
     <header>
-        <div class="logo">🚀 Faby Academy</div>
-        <nav><a href="index.html">⬅ Volver al inicio</a></nav>
+        <div class="nav-container">
+            <div class="logo"><span>Informa</span>prende</div>
+            <nav><a href="index.html">⬅ Volver a Unidades</a></nav>
+        </div>
     </header>
 
     <div class="lesson-container">
-        <h1>¿Qué es un Driver (Controlador)?</h1>
-        <p>Imagina que tu Sistema Operativo (Windows) habla español y tu Impresora habla japonés. No se entienden, ¿verdad?</p>
+        <h1>Drivers: El Traductor Universal</h1>
         
-        <p>Un <strong>Driver</strong> actúa como un <strong>traductor</strong>. Es un pequeño programa que permite que el sistema operativo se comunique con el hardware.</p>
+        <section class="explanation">
+            <p>Imagina que compras una impresora de última generación y la conectas a tu computadora. La impresora "habla" un idioma técnico muy complejo y Windows habla otro. <strong>Sin un traductor, no pasará nada.</strong></p>
 
-        <div class="infographic">
-            <div class="info-box">
-                <i class="fa-brands fa-windows fa-2x"></i><br>
-                <strong>Windows</strong><br>
-                (Cliente)
-            </div>
-            <div class="arrow">➡</div>
-            <div class="info-box" style="border-color: #58cc02; background: #eaffea;">
-                <i class="fa-solid fa-file-code fa-2x"></i><br>
-                <strong>DRIVER</strong><br>
-                (Traductor)
-            </div>
-            <div class="arrow">➡</div>
-            <div class="info-box">
-                <i class="fa-solid fa-print fa-2x"></i><br>
-                <strong>Impresora</strong><br>
-                (Hardware)
-            </div>
-        </div>
-
-        <h2>¿Por qué son importantes?</h2>
-        <ul>
-            <li>Sin drivers, la tarjeta de video no mostraría gráficos en alta resolución.</li>
-            <li>El Wi-Fi no funcionaría.</li>
-            <li>La impresora no sabría cómo imprimir una "A".</li>
-        </ul>
-
-        <div class="quiz-section">
-            <h2>🧠 ¡Ponte a prueba!</h2>
-            <p>Pregunta: ¿Cuál es la función principal de un driver?</p>
-            
-            <div class="options-grid">
-                <button class="option-btn" onclick="checkAnswer(this, false)">Hacer que el PC sea más rápido.</button>
-                <button class="option-btn" onclick="checkAnswer(this, true)">Traducir instrucciones entre el SO y el hardware.</button>
-                <button class="option-btn" onclick="checkAnswer(this, false)">Limpiar virus del computador.</button>
-                <button class="option-btn" onclick="checkAnswer(this, false)">Darle energía eléctrica a la pantalla.</button>
+            <div class="highlight-box">
+                <p>Un <strong>Driver</strong> (o controlador) es el software que le enseña al Sistema Operativo cómo usar una pieza de hardware específica.</p>
             </div>
 
-            <div id="feedback"></div>
-        </div>
+            <h2>¿Qué pasa si no tengo los drivers?</h2>
+            <p>Es como tener los mejores ingredientes pero no tener la receta. Verás síntomas como:</p>
+            <ul>
+                <li>La pantalla se ve estirada o con colores feos (falta driver de video).</li>
+                <li>No tienes internet aunque el cable esté puesto (falta driver de red).</li>
+                <li>El sonido no funciona o se escucha entrecortado.</li>
+            </ul>
+        </section>
+
+        
+
+        <section class="quiz-section">
+            <h2>🧠 Desafío de Hardware</h2>
+            <div class="quiz-card">
+                <p>Si instalas una tarjeta de video nueva pero los juegos se ven lentos y mal, ¿qué es lo más probable que falte?</p>
+                <div class="options">
+                    <button class="option-btn" onclick="check(this, false)">Comprar otra pantalla.</button>
+                    <button class="option-btn" onclick="check(this, true)">Actualizar el driver de la tarjeta de video.</button>
+                    <button class="option-btn" onclick="check(this, false)">Limpiar el teclado.</button>
+                </div>
+                <div id="feedback" style="margin-top: 15px; font-weight: bold;"></div>
+            </div>
+        </section>
     </div>
-
-    <script src="script.js"></script>
+    <script>
+        function check(btn, isCorrect) {
+            const feedback = document.getElementById('feedback');
+            if(isCorrect) {
+                btn.style.background = "#22c55e";
+                feedback.innerHTML = "¡Correcto! 🎮 El driver le dirá a Windows cómo usar toda la potencia de la tarjeta.";
+                feedback.style.color = "#22c55e";
+            } else {
+                btn.style.background = "#ef4444";
+                feedback.innerHTML = "Incorrecto. ❌ El problema es de comunicación (software), no del monitor.";
+                feedback.style.color = "#ef4444";
+            }
+        }
+    </script>
 </body>
 </html>
